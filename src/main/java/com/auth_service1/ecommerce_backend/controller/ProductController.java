@@ -1,7 +1,7 @@
 package com.auth_service1.ecommerce_backend.controller;
 
-import com.auth_service1.ecommerce_backend.dto.ProductRequest;
-import com.auth_service1.ecommerce_backend.dto.ProductResponse;
+import com.auth_service1.ecommerce_backend.dto.product.ProductRequest;
+import com.auth_service1.ecommerce_backend.dto.product.ProductResponse;
 import com.auth_service1.ecommerce_backend.service.ProductService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

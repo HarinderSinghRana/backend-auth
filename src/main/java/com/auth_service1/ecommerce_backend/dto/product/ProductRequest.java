@@ -1,4 +1,4 @@
-package com.auth_service1.ecommerce_backend.dto;
+package com.auth_service1.ecommerce_backend.dto.product;
 
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.Min;
