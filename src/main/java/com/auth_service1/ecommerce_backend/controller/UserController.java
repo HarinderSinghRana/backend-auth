@@ -5,6 +5,7 @@ import com.auth_service1.ecommerce_backend.dto.user.UserResponse;
 import com.auth_service1.ecommerce_backend.service.UserService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,6 +17,12 @@ import java.util.List;
 public class UserController {
 
     private final UserService userService;
+
+    @PostMapping("/register")
+    public ResponseEntity<UserResponse> registerUser(@RequestBody UserRequest userRequest) {
+        UserResponse registered = userService.registerUser(userRequest);
+        return ResponseEntity.status(HttpStatus.CREATED).body(registered);
+    }
 
     @PostMapping
     public ResponseEntity<UserResponse> createUser(@Valid @RequestBody UserRequest userRequest) {
