@@ -1,0 +1,14 @@
+# Ignore logs and unnecessary build artifacts, but not the final JAR
+target/*.log
+target/*.jar.original
+
+# IntelliJ IDEA files
+*.iml
+.idea/
+
+# Git
+.git/
+.gitignore
+
+# Optional (depending on how you build)
+Dockerfile
