@@ -10,6 +10,7 @@ import com.auth_service1.ecommerce_backend.repository.ProductRepos;
 import com.auth_service1.ecommerce_backend.service.OrderService;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -64,6 +65,20 @@ public class OrderServiceImpl implements OrderService {
                 .orElseThrow(() -> new RuntimeException("Order not found"));
 
         return modelMapper.map(order, OrderResponse.class);
+    }
+
+    @Async
+    public void processOrderAsync(Long orderId){
+        System.out.println("Processing order in thread: " + Thread.currentThread().getName());
+
+        // Simulate a time-consuming task
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+
+        System.out.println("Order " + orderId + " processed.");
     }
 
 }
