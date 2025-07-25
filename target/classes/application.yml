@@ -29,3 +29,8 @@ management:
     web:
       exposure:
         include: health,info,prometheus
+
+logging:
+  level:
+    root: INFO
+    com.auth_service1.ecommerce_backend: INFO

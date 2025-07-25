@@ -9,7 +9,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 public class EcommerceBackendApplication {
 
 	public static void main(String[] args) {
-		System.out.println("This is a first draft page");
+//		System.out.println("This is a first draft page");
 		SpringApplication.run(EcommerceBackendApplication.class, args);
 	}
 
