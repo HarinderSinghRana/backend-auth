@@ -5,8 +5,10 @@ import com.auth_service1.ecommerce_backend.dto.order.OrderResponse;
 import com.auth_service1.ecommerce_backend.service.OrderService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,9 +23,7 @@ public class OrderController {
 
     @PostMapping("/process/{id}")
     public ResponseEntity<String> processOrder(@PathVariable Long id) {
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        System.out.println("Authenticated roles: " + auth.getAuthorities());
-
+        SecurityContextHolder.getContext().getAuthentication();
         orderService.processOrderAsync(id);
         return ResponseEntity.ok("Order is being processed");
     }

@@ -18,6 +18,7 @@ com/auth_service1/ecommerce_backend/dto/order/OrderResponse.class
 com/auth_service1/ecommerce_backend/controller/ProductController.class
 com/auth_service1/ecommerce_backend/entity/User.class
 com/auth_service1/ecommerce_backend/service/impl/OrderServiceImpl.class
+com/auth_service1/ecommerce_backend/config/AsyncConfig.class
 com/auth_service1/ecommerce_backend/entity/Role.class
 com/auth_service1/ecommerce_backend/controller/UserController.class
 com/auth_service1/ecommerce_backend/repository/ProductRepos.class

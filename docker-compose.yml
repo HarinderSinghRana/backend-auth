@@ -13,17 +13,6 @@ services:
       - "5432:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
-  ecommerce-app:
-    image: ecommerce-backend22
-    container_name: ecommerce-app
-    depends_on:
-      - postgres
-    environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/ecommerce
-      SPRING_DATASOURCE_USERNAME: user
-      SPRING_DATASOURCE_PASSWORD: password
-    ports:
-      - "8080:8080"
 
   redis:
     image: redis:latest
@@ -31,6 +20,22 @@ services:
     restart: always
     ports:
       - "6379:6379"
+
+  ecommerce-app:
+    image: ecommerce-backend22
+    container_name: ecommerce-app
+    depends_on:
+      - postgres
+      - redis
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/ecommerce
+      SPRING_DATASOURCE_USERNAME: user
+      SPRING_DATASOURCE_PASSWORD: password
+      SPRING_REDIS_HOST: redis
+      SPRING_REDIS_PORT: port
+    ports:
+      - "8080:8080"
+
 
 volumes:
   pgdata:

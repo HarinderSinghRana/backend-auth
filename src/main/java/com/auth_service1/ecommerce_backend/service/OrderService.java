@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface OrderService {
 
-    public void processOrderAsync(Long orderId);
+    void processOrderAsync(Long orderId);
     OrderResponse placeOrder(OrderRequest request);
     List<OrderResponse> getAllOrders();
     OrderResponse getOrderById(Long id);
