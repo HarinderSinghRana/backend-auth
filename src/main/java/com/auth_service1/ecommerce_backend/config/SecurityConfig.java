@@ -29,6 +29,9 @@ public class SecurityConfig {
                         .requestMatchers("/api/orders/process/**").permitAll()
                         .requestMatchers("/actuator/**").permitAll()
                         .requestMatchers("/api/test/async").permitAll()
+                        .requestMatchers("/v3/api-docs/**").permitAll()
+                        .requestMatchers( "/swagger-ui/**").permitAll()
+                        .requestMatchers( "/swagger-ui.html").permitAll()
                         .anyRequest().authenticated())
                 .sessionManagement(session -> session
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
@@ -58,3 +61,7 @@ public class SecurityConfig {
     }
 
 }
+
+
+//      docker tag ecommerce-backend22 harindersinghrana/ecommerce-backend22:latest
+//      kubectl delete pod -l app=ecommerce-app
