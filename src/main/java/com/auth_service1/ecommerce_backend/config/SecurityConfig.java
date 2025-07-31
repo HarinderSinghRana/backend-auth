@@ -5,6 +5,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -14,6 +15,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
+@Primary
 @Configuration
 @RequiredArgsConstructor
 public class SecurityConfig {
@@ -65,3 +67,7 @@ public class SecurityConfig {
 //      docker push harindersinghrana/ecommerce-backend22:latest
 //      kubectl delete pod -l app=ecommerce-app
 //      kubectl get pods -w
+
+// docker-pullable://harindersinghrana/ecommerce-backend22
+// @sha256:6157b46358336fd94db5dab9fa5
+// abb45fd0ebdc43680f387a96fb24b038e0501

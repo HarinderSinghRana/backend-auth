@@ -13,10 +13,10 @@ WORKDIR /app
 VOLUME /tmp
 
 # Jar file name may vary
-ARG JAR_FILE=target/*.jar
+#ARG JAR_FILE=target/*.jar
 
 # Copy the JAR file into the container
-COPY ${JAR_FILE} app.jar
+COPY target/ecommerce-backend22-0.0.1-SNAPSHOT.jar app.jar
 
 # Expose the application port
 EXPOSE 8080

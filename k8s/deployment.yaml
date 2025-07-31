@@ -26,7 +26,8 @@ spec:
     spec:
       containers:
         - name: ecommerce-app
-          image: harindersinghrana/ecommerce-backend22:latest
+          image: ecommerce-backend22:latest
+          imagePullPolicy: Never
           ports:
             - containerPort: 8080
           env:

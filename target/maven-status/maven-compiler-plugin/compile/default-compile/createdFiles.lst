@@ -35,7 +35,6 @@ com/auth_service1/ecommerce_backend/service/UserService.class
 com/auth_service1/ecommerce_backend/config/ModelMapperConfig.class
 com/auth_service1/ecommerce_backend/security/JwtUtil.class
 com/auth_service1/ecommerce_backend/entity/Product$ProductBuilder.class
-com/auth_service1/ecommerce_backend/config/SwaggerConfig.class
 com/auth_service1/ecommerce_backend/entity/OrderItem.class
 com/auth_service1/ecommerce_backend/controller/TestController.class
 com/auth_service1/ecommerce_backend/service/OrderService.class

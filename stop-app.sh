@@ -13,4 +13,7 @@ kubectl delete -f k8s/
 read -p "❓ Stop minikube too? (y/n): " yn
 if [[ $yn == "y" ]]; then
   minikube stop
+  echo "Minikube stopped!"
+else
+  echo "Minikube is still ON!"
 fi
