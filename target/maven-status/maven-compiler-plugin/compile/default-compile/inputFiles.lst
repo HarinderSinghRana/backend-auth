@@ -3,6 +3,7 @@
 /Users/harinder/Downloads/ecommerce-backend22/src/main/java/com/auth_service1/ecommerce_backend/config/ModelMapperConfig.java
 /Users/harinder/Downloads/ecommerce-backend22/src/main/java/com/auth_service1/ecommerce_backend/config/OpenApiConfig.java
 /Users/harinder/Downloads/ecommerce-backend22/src/main/java/com/auth_service1/ecommerce_backend/config/SecurityConfig.java
+/Users/harinder/Downloads/ecommerce-backend22/src/main/java/com/auth_service1/ecommerce_backend/config/WebConfig.java
 /Users/harinder/Downloads/ecommerce-backend22/src/main/java/com/auth_service1/ecommerce_backend/controller/AuthController.java
 /Users/harinder/Downloads/ecommerce-backend22/src/main/java/com/auth_service1/ecommerce_backend/controller/OrderController.java
 /Users/harinder/Downloads/ecommerce-backend22/src/main/java/com/auth_service1/ecommerce_backend/controller/ProductController.java

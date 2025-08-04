@@ -16,6 +16,7 @@ com/auth_service1/ecommerce_backend/security/JwtAuthenticationFilter.class
 com/auth_service1/ecommerce_backend/entity/Order.class
 com/auth_service1/ecommerce_backend/service/impl/CustomUserDetailsService.class
 com/auth_service1/ecommerce_backend/service/ProductService.class
+com/auth_service1/ecommerce_backend/config/WebConfig.class
 com/auth_service1/ecommerce_backend/dto/order/OrderResponse.class
 com/auth_service1/ecommerce_backend/controller/ProductController.class
 com/auth_service1/ecommerce_backend/entity/User.class
