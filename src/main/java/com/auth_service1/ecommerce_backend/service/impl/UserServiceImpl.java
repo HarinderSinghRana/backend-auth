@@ -9,7 +9,7 @@ import com.auth_service1.ecommerce_backend.exception.ResourceNotFoundException;
 import com.auth_service1.ecommerce_backend.repository.UserRepos;
 import com.auth_service1.ecommerce_backend.service.UserService;
 import lombok.RequiredArgsConstructor;
-import mapper.UserMapper;
+import com.auth_service1.ecommerce_backend.mapper.UserMapper;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 

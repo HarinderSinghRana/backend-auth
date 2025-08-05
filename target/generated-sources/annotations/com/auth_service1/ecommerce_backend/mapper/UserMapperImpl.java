@@ -1,4 +1,4 @@
-package mapper;
+package com.auth_service1.ecommerce_backend.mapper;
 
 import com.auth_service1.ecommerce_backend.dto.user.UserRequest;
 import com.auth_service1.ecommerce_backend.dto.user.UserResponse;
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2025-08-04T15:27:33-0400",
+    date = "2025-08-05T15:12:52-0400",
     comments = "version: 1.6.3, compiler: javac, environment: Java 21.0.5 (Oracle Corporation)"
 )
 @Component

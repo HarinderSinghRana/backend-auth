@@ -1,4 +1,4 @@
-package mapper;
+package com.auth_service1.ecommerce_backend.mapper;
 
 import com.auth_service1.ecommerce_backend.dto.user.UserRequest;
 import com.auth_service1.ecommerce_backend.dto.user.UserResponse;

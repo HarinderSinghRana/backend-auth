@@ -24,6 +24,10 @@
 /Users/harinder/Downloads/ecommerce-backend22/src/main/java/com/auth_service1/ecommerce_backend/entity/Product.java
 /Users/harinder/Downloads/ecommerce-backend22/src/main/java/com/auth_service1/ecommerce_backend/entity/Role.java
 /Users/harinder/Downloads/ecommerce-backend22/src/main/java/com/auth_service1/ecommerce_backend/entity/User.java
+/Users/harinder/Downloads/ecommerce-backend22/src/main/java/com/auth_service1/ecommerce_backend/exception/EmailAlreadyExistsException.java
+/Users/harinder/Downloads/ecommerce-backend22/src/main/java/com/auth_service1/ecommerce_backend/exception/ResourceNotFoundException.java
+/Users/harinder/Downloads/ecommerce-backend22/src/main/java/com/auth_service1/ecommerce_backend/exception/RestExceptionHandler.java
+/Users/harinder/Downloads/ecommerce-backend22/src/main/java/com/auth_service1/ecommerce_backend/mapper/UserMapper.java
 /Users/harinder/Downloads/ecommerce-backend22/src/main/java/com/auth_service1/ecommerce_backend/repository/OrderRepos.java
 /Users/harinder/Downloads/ecommerce-backend22/src/main/java/com/auth_service1/ecommerce_backend/repository/ProductRepos.java
 /Users/harinder/Downloads/ecommerce-backend22/src/main/java/com/auth_service1/ecommerce_backend/repository/UserRepos.java
