@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
@@ -25,6 +26,7 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         return http.csrf(csrf -> csrf.disable())
+                .cors(Customizer.withDefaults())
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/api/auth/**", "/api/users/register").permitAll()
                         .requestMatchers("/api/admin/**").hasRole("ADMIN")
@@ -69,5 +71,3 @@ public class SecurityConfig {
 //      kubectl get pods -w
 
 // docker-pullable://harindersinghrana/ecommerce-backend22
-// @sha256:6157b46358336fd94db5dab9fa5
-// abb45fd0ebdc43680f387a96fb24b038e0501
