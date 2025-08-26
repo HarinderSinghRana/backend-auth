@@ -2,6 +2,7 @@ package com.auth_service1.ecommerce_backend.service.impl;
 
 import com.auth_service1.ecommerce_backend.dto.order.OrderRequest;
 import com.auth_service1.ecommerce_backend.dto.order.OrderResponse;
+import com.auth_service1.ecommerce_backend.dto.order_item.OrderItemResponse;
 import com.auth_service1.ecommerce_backend.entity.Order;
 import com.auth_service1.ecommerce_backend.entity.OrderItem;
 import com.auth_service1.ecommerce_backend.entity.Product;
@@ -70,6 +71,23 @@ public class OrderServiceImpl implements OrderService {
                 .orElseThrow(() -> new RuntimeException("Order not found"));
 
         return modelMapper.map(order, OrderResponse.class);
+    }
+
+    @Override
+    public List<OrderResponse> getOrdersByUserEmail(String email) {
+        return orderRepository.findByCustomerEmail(email)
+                .stream()
+                .map(order -> {
+                    OrderResponse response = modelMapper.map(order, OrderResponse.class);
+                    if (order.getItems() != null) {
+                        response.setItems(order.getItems()
+                                .stream()
+                                .map(item -> modelMapper.map(item, OrderItemResponse.class))
+                                .collect(Collectors.toList()));
+                    }
+                    return response;
+                })
+                .collect(Collectors.toList());
     }
 
     @Async

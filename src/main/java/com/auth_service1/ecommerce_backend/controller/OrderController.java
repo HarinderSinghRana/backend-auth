@@ -43,4 +43,11 @@ public class OrderController {
         return ResponseEntity.ok(orderService.getOrderById(id));
     }
 
+    @GetMapping("/my")
+    public ResponseEntity<List<OrderResponse>> getMyOrders(Authentication authentication) {
+        String email = authentication.getName(); // JWT username/email
+        System.out.println("JWT email: " + email);
+        return ResponseEntity.ok(orderService.getOrdersByUserEmail(email));
+    }
+
 }

@@ -12,4 +12,6 @@ public interface OrderService {
     List<OrderResponse> getAllOrders();
     OrderResponse getOrderById(Long id);
 
+    List<OrderResponse> getOrdersByUserEmail(String email);
+
 }

@@ -45,8 +45,8 @@ public class AuthController {
 
         String token = jwtUtil.generateToken(appUser.getEmail());
 
-        System.out.println("LET US SEE WHAT IT IS PRINTING"+token +" "+ appUser.getUsername());
-        return ResponseEntity.ok(new AuthResponse(token, appUser.getUsername()));
+        System.out.println("TOKEN = "+token +" USERNAME - "+ appUser.getUsername() + " EMAIL - "+ appUser.getEmail());
+        return ResponseEntity.ok(new AuthResponse(token, appUser.getUsername(), appUser.getEmail()));
     }
 
 }

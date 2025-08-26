@@ -19,8 +19,11 @@ public class CustomUserDetailsService implements UserDetailsService {
         User user = userRepository.findByEmail(email)
                 .orElseThrow(() -> new UsernameNotFoundException("User not found"));
 
+        System.out.println("LOAD USER BY USERNAME (sent): " + email +"\n");
+        System.out.println("LOAD USER BY USERNAME (check): " + user.getEmail()+"\n");
+
         return org.springframework.security.core.userdetails.User.builder()
-                .username(user.getUsername())
+                .username(user.getEmail())
 //                .username(user.getEmail())
                 .password(user.getPassword())
                 .roles(user.getRole().name()) // assumes Role enum
